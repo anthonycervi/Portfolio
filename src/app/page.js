@@ -9,7 +9,7 @@ export default function Home() {
       <Header />
       <main className="flex-1 container mx-auto px-6 py-12">
         <section className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-4">Hi, I'm Anthony Cervi</h1>
+          <h1 className="text-5xl font-bold mb-4">Hi, I&apos;m Anthony Cervi</h1>
           <p className="text-gray-700 text-lg">UX/UI Designer & Front-End Developer</p>
         </section>
 
