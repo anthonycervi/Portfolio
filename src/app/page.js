@@ -23,7 +23,7 @@ export default function Home() {
             My portfolio is under construction — while that’s happening, you can
             find me on{" "}
             <a
-              href="https://www.linkedin.com/in/anthonycervi"
+              href="https://www.linkedin.com/in/anthony-cervi/"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:text-gray-900"
