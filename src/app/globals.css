@@ -24,3 +24,29 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.rainbow-text {
+  background: linear-gradient(
+    90deg,
+    #FDCA0E,
+    #FC5649,
+    #6495ED,
+    #89BE57
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowShift 8s ease infinite;
+}
+
+@keyframes rainbowShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
