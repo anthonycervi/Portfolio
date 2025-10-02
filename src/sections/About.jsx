@@ -34,7 +34,6 @@ const SKILL_CATEGORIES = {
     "Chief Architect",
     "Squarespace",
   ],
-  Other: ["Github", "Gitlab", "Netlify", "Vercel", "Trello", "Slack", "Command Line"],
 };
 
 const COLORS = ["#FDCA0E", "#FC5649", "#6495ED", "#89BE57"];
@@ -55,7 +54,7 @@ function SkillChip({ label }) {
     <span
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="cursor-pointer rounded-md px-3 py-1 text-sm font-medium transition-colors duration-200"
+      className="cursor-pointer rounded-md px-4 py-2 text-base font-medium transition-colors duration-200"
       style={{
         backgroundColor: hoverColor ? hoverColor : "#e5e7eb", // gray-200 default
         color: hoverColor ? "#fff" : "#1f2937", // white on hover, gray-800 default
@@ -83,33 +82,43 @@ export default function About({ id }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
           <div className="lg:col-span-2">
             <SectionTitle>About Me</SectionTitle>
-            <p className="mt-4 text-[#4b4b4b] leading-relaxed">
-              I’m a UI/UX designer and front-end developer focused on fast,
-              user-centered products. I like clean systems, strong typography,
-              and shipping.
-            </p>
-            <ul className="mt-6 grid grid-cols-2 gap-4 text-[#4b4b4b]">
-              <li>Design Systems</li>
-              <li>React / Next.js</li>
-              <li>Tailwind CSS</li>
-              <li>Product Strategy</li>
-            </ul>
+
+            {/* Larger text + separated paragraphs */}
+            <div className="mt-6 space-y-6 text-lg sm:text-xl leading-relaxed text-[#4b4b4b]">
+              <p>
+                I'm a graduate with a Diploma in Digital Design and Development
+                and a Bachelor of Business Administration degree.
+              </p>
+
+              <p>
+                With a keen eye for aesthetics and a love for innovation, I
+                thrive on crafting engaging digital experiences. I embrace
+                challenges, continuously learn, and bring a dynamic energy to
+                every project.
+              </p>
+
+              <p>
+                When I'm not immersed in work or studies, you'll often find me
+                involved in sports, both playing and watching, or indulging in
+                personal creative projects like woodworking, ceramics, and
+                digital design.
+              </p>
+            </div>
+
+            {/* Quick highlight list */}
+            
           </div>
+
           <div className="rounded-2xl bg-white ring-1 ring-[#d9d9d9] aspect-square shadow-sm" />
         </div>
 
         {/* Skills Section */}
         <div className="mt-20">
-          <div className="flex items-center space-x-2 mb-8">
-            <span className="w-4 h-4 bg-[#FC5649] rounded-sm" />
-            <h2 className="text-2xl font-bold">Skills</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {Object.entries(SKILL_CATEGORIES).map(([category, skills]) => (
-              <div key={category} className="space-y-4">
-                <h3 className="text-gray-500 font-semibold">{category}</h3>
-                <div className="flex flex-wrap gap-2">
+              <div key={category} className="space-y-5">
+                <h3 className="text-gray-600 font-semibold text-xl">{category}</h3>
+                <div className="flex flex-wrap gap-3">
                   {skills.map((skill) => (
                     <SkillChip key={skill} label={skill} />
                   ))}

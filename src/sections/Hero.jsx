@@ -38,7 +38,7 @@ function ScrambleWord({ words, holdTime = 2000 }) {
           setDisplay(target);
           setPhase("hold");
         }
-      }, 70);
+      }, 40);
     }
 
     if (phase === "hold") {
@@ -60,7 +60,7 @@ function ScrambleWord({ words, holdTime = 2000 }) {
           setTargetIndex((i) => (i + 1) % words.length);
           setPhase("enter");
         }
-      }, 70);
+      }, 40);
     }
 
     return () => {
