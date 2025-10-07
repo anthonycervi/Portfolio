@@ -2,6 +2,7 @@
 import { useState } from "react";
 import SectionTitle from "../components/SectionTitle";
 
+/** ---- Skills data ---- */
 const SKILL_CATEGORIES = {
   Development: [
     "HTML",
@@ -45,10 +46,7 @@ function SkillChip({ label }) {
     const randomColor = COLORS[Math.floor(Math.random() * COLORS.length)];
     setHoverColor(randomColor);
   };
-
-  const handleMouseLeave = () => {
-    setHoverColor(null);
-  };
+  const handleMouseLeave = () => setHoverColor(null);
 
   return (
     <span
@@ -56,7 +54,7 @@ function SkillChip({ label }) {
       onMouseLeave={handleMouseLeave}
       className="cursor-pointer rounded-md px-4 py-2 text-base font-medium transition-colors duration-200"
       style={{
-        backgroundColor: hoverColor ? hoverColor : "#e5e7eb", // gray-200 default
+        backgroundColor: hoverColor ? hoverColor : "#e5e7eb", // gray-200
         color: hoverColor ? "#fff" : "#1f2937", // white on hover, gray-800 default
       }}
     >
@@ -67,52 +65,107 @@ function SkillChip({ label }) {
 
 export default function About({ id }) {
   return (
-    <section id={id} className="relative min-h-screen py-20">
-      {/* full-bleed background */}
-      <div className="absolute inset-0 bg-white -z-10" aria-hidden="true" />
+    <section id={id} data-bg="light" className="relative min-h-screen py-20">
+      {/* light background */}
+      <div className="absolute inset-0 bg-[#fafafa] -z-10" aria-hidden="true" />
 
       {/* aligned content */}
       <div
         className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8"
-        style={{
-          marginLeft: "calc(var(--rail-left) + var(--content-gap, 1px))",
-        }}
+        style={{ marginLeft: "calc(var(--rail-left) + var(--content-gap, 1px))" }}
       >
-        {/* About content */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+          {/* Left content */}
           <div className="lg:col-span-2">
-            <SectionTitle>About Me</SectionTitle>
+            <SectionTitle>About</SectionTitle>
 
-            {/* Larger text + separated paragraphs */}
-            <div className="mt-6 space-y-6 text-lg sm:text-xl leading-relaxed text-[#4b4b4b]">
-              <p>
-                I'm a graduate with a Diploma in Digital Design and Development
-                and a Bachelor of Business Administration degree.
-              </p>
+            {/* Intro */}
+            <p className="mt-6 text-lg sm:text-xl leading-relaxed text-[#4b4b4b]">
+              I’m a product designer & front-end builder who loves turning
+              complex problems into clear, usable interfaces. I care about the
+              details—micro-interactions, motion, readable systems—and I ship.
+            </p>
 
-              <p>
-                With a keen eye for aesthetics and a love for innovation, I
-                thrive on crafting engaging digital experiences. I embrace
-                challenges, continuously learn, and bring a dynamic energy to
-                every project.
-              </p>
+            {/* Snapshot */}
+            <div className="mt-8 grid sm:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <h3 className="text-sm font-semibold tracking-wide uppercase text-[#6b7280]">
+                  Snapshot
+                </h3>
+                <ul className="space-y-1 text-[#4b4b4b]">
+                  <li>• Designer & builder (UI/UX + front-end)</li>
+                  <li>• Seeking full-time roles</li>
+                  <li>• Practical, detail-oriented, collaborative</li>
+                </ul>
+              </div>
 
-              <p>
-                When I'm not immersed in work or studies, you'll often find me
-                involved in sports, both playing and watching, or indulging in
-                personal creative projects like woodworking, ceramics, and
-                digital design.
-              </p>
+              {/* Strengths */}
+              <div className="space-y-2">
+                <h3 className="text-sm font-semibold tracking-wide uppercase text-[#6b7280]">
+                  Strengths
+                </h3>
+                <ul className="space-y-1 text-[#4b4b4b]">
+                  <li>• Problem-solving with crisp, testable solutions</li>
+                  <li>• Human-centered empathy from discovery to delivery</li>
+                </ul>
+              </div>
             </div>
 
-            {/* Quick highlight list */}
-            
+            {/* Process */}
+            <div className="mt-10 space-y-3">
+              <h3 className="text-sm font-semibold tracking-wide uppercase text-[#6b7280]">
+                How I work
+              </h3>
+              <ol className="space-y-2 text-[#4b4b4b]">
+                <li>
+                  <span className="font-semibold">1) Discover</span> — clarify
+                  goals, risks, constraints; talk to users; map jobs-to-be-done.
+                </li>
+                <li>
+                  <span className="font-semibold">2) Define</span> — synthesize
+                  insights; frame the problem and success metrics.
+                </li>
+                <li>
+                  <span className="font-semibold">3) Design</span> — low-fi →
+                  hi-fi flows, systems, motion; iterate with tight feedback loops.
+                </li>
+                <li>
+                  <span className="font-semibold">4) Deliver</span> — document
+                  components, pair with engineering, measure outcomes, refine.
+                </li>
+              </ol>
+            </div>
+
+            {/* Values */}
+            <div className="mt-10 space-y-3">
+              <h3 className="text-sm font-semibold tracking-wide uppercase text-[#6b7280]">
+                Values
+              </h3>
+              <ul className="space-y-1 text-[#4b4b4b]">
+                <li>• Craft — sweat the details; make it feel inevitable.</li>
+                <li>• Candor — clear, kind feedback makes work better.</li>
+                <li>• Ownership — bias to action; leave work better than you found it.</li>
+              </ul>
+            </div>
+
+            {/* Outside of work */}
+            <div className="mt-10 space-y-3">
+              <h3 className="text-sm font-semibold tracking-wide uppercase text-[#6b7280]">
+                Outside of work
+              </h3>
+              <p className="text-[#4b4b4b]">
+                I love skiing and cycling. I was raised on the slopes, hiking
+                trails, and cycling big climbs. That balance of focused digital
+                craft and outdoor challenge keeps my head clear and my work sharp.
+              </p>
+            </div>
           </div>
 
+          {/* Right card / visual placeholder */}
           <div className="rounded-2xl bg-white ring-1 ring-[#d9d9d9] aspect-square shadow-sm" />
         </div>
 
-        {/* Skills Section */}
+        {/* Skills */}
         <div className="mt-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {Object.entries(SKILL_CATEGORIES).map(([category, skills]) => (

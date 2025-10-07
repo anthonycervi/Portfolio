@@ -49,7 +49,7 @@ export default function PageRail({ sections, active, containerRef, railLeft }) {
     >
       {dotValues.length > 0 && (
         <div
-          className="absolute w-[2px] bg-[#d9d9d9] rounded-full left-1/2 -translate-x-1/2"
+          className="absolute w-[2px] bg-gray-300 opacity-50 rounded-full left-1/2 -translate-x-1/2"
           style={{ top: `${minDot}px`, bottom: 0 }}
         />
       )}
