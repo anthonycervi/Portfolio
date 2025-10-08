@@ -48,7 +48,11 @@ export default function Work({ id }) {
 
   return (
     <section id={id} data-bg="dark" className="relative min-h-screen py-40">
-      <div className="absolute inset-0 bg-[#181818] -z-10" aria-hidden="true" />
+      <div
+        className="absolute inset-0 -z-10"
+        style={{ backgroundColor: "#181818" }}
+        aria-hidden="true"
+      />
       <div
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         style={{ marginLeft: "calc(var(--rail-left) + var(--content-gap, 1px))" }}
