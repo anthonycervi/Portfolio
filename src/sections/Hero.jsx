@@ -99,7 +99,7 @@ export default function Hero({ id }) {
     <section id={id} className="relative min-h-screen flex items-center py-20">
       {/* full-bleed background */}
       <div
-        className="absolute inset-0 bg-[#f9f8f3] -z-10"
+        className="absolute inset-0 bg-[#fafafa] -z-10"
         aria-hidden="true"
       />
 

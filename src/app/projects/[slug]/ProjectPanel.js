@@ -64,6 +64,18 @@ export default function ProjectPanel({ project, prev, next, currentIndex, total 
           <span className="mr-2">←</span> Home
         </a>
 
+        {/* Hashtags (static chips above arrows) */}
+        {project.tags && project.tags.length > 0 && (
+          <div className="mb-6 flex flex-wrap gap-x-1 text-white/35 text-base font-semibold">
+            {project.tags.map((tag, i) => (
+              <span key={i}>
+                #{tag}
+                {i < project.tags.length - 1 && ','}
+              </span>
+            ))}
+          </div>
+        )}
+
         {/* Title (animate on page change) */}
         <motion.h1
           key={project.slug}
@@ -100,21 +112,6 @@ export default function ProjectPanel({ project, prev, next, currentIndex, total 
 
       {/* Bottom (static bar/arrows/number; bar eases between values without restarting) */}
       <div>
-        {/* Hashtags (animate on change) */}
-        {project.tags && project.tags.length > 0 && (
-          <motion.div
-            key={project.slug + "-tags"}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, ease: "easeOut" }}
-            className="mb-6 flex flex-wrap gap-x-3 gap-y-2 text-base sm:text-lg font-semibold text-gray-300/70"
-          >
-            {project.tags.map((tag, i) => (
-              <span key={i}>#{tag}</span>
-            ))}
-          </motion.div>
-        )}
-
         {/* Arrows (static) */}
         <div className="flex justify-between items-center mb-6">
           <a
