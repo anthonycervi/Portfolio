@@ -138,7 +138,9 @@ export default function Work({ id }) {
                       <h3 className="text-2xl font-extrabold text-gray-100">{project.title}</h3>
                       <div className="w-44 h-[4px] bg-gray-100" />
                       <div className="flex items-center space-x-2">
-                        <span className="text-base font-semibold text-gray-100 opacity-50">Case Study</span>
+                        <span className="text-base font-semibold text-gray-100 opacity-50">
+                          {project.linkText || "Case Study"}
+                        </span>
                         <span className="transform transition-transform duration-150 group-hover:translate-x-8 text-gray-100 opacity-50" aria-hidden="true">
                           →
                         </span>

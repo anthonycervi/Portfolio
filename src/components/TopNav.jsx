@@ -5,22 +5,12 @@ export default function TopNav({ sections, active, onJump, showNav }) {
         showNav ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div
-        className="absolute inset-0"
-        style={{
-          backdropFilter: "blur(14px)",
-          WebkitBackdropFilter: "blur(14px)",
-          maskImage:
-            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%)",
-          WebkitMaskImage:
-            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%)",
-        }}
-      />
-      <div className="relative flex items-center justify-between px-6 py-4">
-        {/* Logo (always green) */}
+      {/* Apply blending properly */}
+      <div className="relative flex items-center justify-between px-6 py-4 mix-blend-difference text-black">
+        {/* Logo */}
         <div
           onClick={() => onJump("start")}
-          className="text-3xl sm:text-4xl font-extrabold tracking-wide text-[#89BE57] cursor-pointer transform transition-transform duration-300 hover:scale-110"
+          className="text-3xl sm:text-4xl font-extrabold tracking-wide cursor-pointer transform transition-transform duration-300 hover:scale-110"
         >
           CERVI
         </div>
@@ -31,10 +21,8 @@ export default function TopNav({ sections, active, onJump, showNav }) {
             <button
               key={s.id}
               onClick={() => onJump(s.id)}
-              className={`transition-colors duration-200 ${
-                active === s.id
-                  ? "text-[#2f2f2f]" // active section = dark
-                  : "text-gray-400 hover:text-[#2f2f2f]"
+              className={`transition-all duration-200 hover:opacity-80 ${
+                active === s.id ? "opacity-100" : "opacity-60"
               }`}
             >
               {s.label}
