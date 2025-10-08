@@ -8,6 +8,9 @@ const projects = [
     tags: ["React", "Next.js", "Tailwind", "UX/UI"],
     link: "https://fangotickets.com",
     linkText: "Website",
+    dotImage: "/projects/fango-dot.webp",
+    dotPosition: { top: "8%", right: "5%" },
+    dotSize: "120px",
   },
   {
     slug: "focuspact",
@@ -22,6 +25,9 @@ const projects = [
     tags: ["Next.js", "Tailwind", "FramerMotion", "ResponsiveDesign"],
     link: "https://example.com/portfolio-website",
     linkText: "Mobile App",
+    dotImage: "/projects/focuspact-dot.webp",
+    dotPosition: { top: "10%", left: "8%" },
+    dotSize: "100px",
   },
   {
     slug: "noline",
@@ -36,6 +42,9 @@ const projects = [
     tags: ["React", "Shopify", "Figma", "UI/UX"],
     link: "https://example.com/ecommerce-prototype",
     linkText: "Case Study",
+    dotImage: "/projects/noline2.webp",
+    dotPosition: { top: "12%", right: "-10%" },
+    dotSize: "110px",
   },
   {
     slug: "cross-culture-ministries",
@@ -50,6 +59,9 @@ const projects = [
     tags: ["React Native", "Expo", "Firebase", "UX/UI"],
     link: "https://example.com/mobile-fitness-app",
     linkText: "Practicum",
+    dotImage: "/projects/ccm-dot.webp",
+    dotPosition: { top: "14%", left: "6%" },
+    dotSize: "130px",
   },
   {
     slug: "soundtrack",
@@ -60,6 +72,9 @@ const projects = [
     tags: ["Next.js", "Tailwind", "Node.js", "Design System"],
     link: "https://example.com/local-deals-platform",
     linkText: "Mockup",
+    dotImage: "/projects/soundtrack-dot.webp",
+    dotPosition: { top: "9%", right: "8%" },
+    dotSize: "100px",
   },
 ];
 

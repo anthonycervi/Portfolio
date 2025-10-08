@@ -147,17 +147,28 @@ export default function Work({ id }) {
                       </div>
                     </div>
 
-                    {/* green square / dot */}
+                    {/* green square / dot replaced with dynamic image */}
                     {project.dotImage ? (
                       <img
                         src={project.dotImage}
-                        alt="project icon"
-                        style={{ position: "absolute", ...dotPosition, width: dotSize, height: dotSize, transform: "translateZ(40px) scale(0.9)" }}
+                        alt={`${project.title} icon`}
+                        className="absolute object-contain opacity-100 pointer-events-none"
+                        style={{
+                          ...dotPosition,
+                          width: dotSize,
+                          height: dotSize,
+                          transform: "translateZ(40px) scale(0.9)",
+                        }}
                       />
                     ) : (
                       <div
-                        className="bg-[#89BE57] absolute"
-                        style={{ ...dotPosition, width: dotSize, height: dotSize, transform: "translateZ(40px) scale(0.9)" }}
+                        className="absolute bg-[#89BE57]"
+                        style={{
+                          ...dotPosition,
+                          width: dotSize,
+                          height: dotSize,
+                          transform: "translateZ(40px) scale(0.9)",
+                        }}
                       />
                     )}
                   </div>
