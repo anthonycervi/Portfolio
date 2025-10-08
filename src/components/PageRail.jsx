@@ -67,8 +67,9 @@ export default function PageRail({ sections, active, containerRef, railLeft }) {
               }}
             >
               <div
-                className="w-3 h-3 rounded-full border-2 border-[#f9f8f3]"
+                className="w-3 h-3 rounded-full border-2"
                 style={{
+                  borderColor: s.id === "work" ? "#181818" : "#f9f8f3",
                   backgroundColor: "#89BE57", // always green
                 }}
               />
