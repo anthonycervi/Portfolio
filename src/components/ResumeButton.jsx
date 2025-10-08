@@ -5,7 +5,7 @@ export default function ResumeButton() {
       target="_blank"
       rel="noopener noreferrer"
       className="fixed right-0 top-[40%] z-50
-                 bg-[#89BE57] text-white font-semibold px-4 py-2
+                 bg-[#89BE57] text-white font-semibold text-lg px-6 py-3
                  rounded-tl-md rounded-tr-md shadow-lg transform -rotate-90 origin-bottom-right
                  hover:bg-[#6fa34a] active:bg-[#5e8e3d] transition-colors duration-200"
     >

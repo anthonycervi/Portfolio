@@ -26,6 +26,24 @@ const projects = [
     tags: ["React", "Shopify", "Figma", "UI/UX"],
     link: "https://example.com/ecommerce-prototype",
   },
+  {
+    slug: "mobile-fitness-app",
+    title: "Mobile Fitness App",
+    description:
+      "A cross-platform fitness tracking app featuring social challenges, workout logging, and interactive data visualizations.",
+    image: "/projects/fitness-app.png",
+    tags: ["React Native", "Expo", "Firebase", "UX/UI"],
+    link: "https://example.com/mobile-fitness-app",
+  },
+  {
+    slug: "local-deals-platform",
+    title: "Local Deals Platform",
+    description:
+      "A web platform connecting users with nearby businesses through exclusive location-based offers and integrations with ticket purchases.",
+    image: "/projects/local-deals.png",
+    tags: ["Next.js", "Tailwind", "Node.js", "Design System"],
+    link: "https://example.com/local-deals-platform",
+  },
 ];
 
 export default projects;

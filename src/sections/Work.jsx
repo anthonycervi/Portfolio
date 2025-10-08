@@ -99,7 +99,7 @@ export default function Work({ id }) {
                       />
                     )}
 
-                    <article className="relative overflow-hidden bg-[#222222] shadow-lg" style={{ transformStyle: "preserve-3d" }}>
+                    <article className="relative overflow-hidden bg-[#222222] shadow-lg rounded-md" style={{ transformStyle: "preserve-3d" }}>
                       <img src={project.image} alt={project.title} className="aspect-video object-cover" />
 
                       {/* darker, more localized corner shadow */}
@@ -132,7 +132,7 @@ export default function Work({ id }) {
 
                     {/* title block moved down a bit */}
                     <div
-                      className="absolute bottom-4 -left-20 flex flex-col items-start space-y-3"
+                      className="absolute bottom-4 -left-10 flex flex-col items-start space-y-3"
                       style={{ transform: "translateZ(40px) scale(0.9)" }}
                     >
                       <h3 className="text-2xl font-extrabold text-gray-100">{project.title}</h3>
