@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="relative py-6 bg-[transparent]">
       {/* full-bleed background */}
-      <div className="absolute inset-0 bg-[#f9f8f3] -z-10" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[#fafafa] -z-10" aria-hidden="true" />
 
       {/* aligned container */}
       <div

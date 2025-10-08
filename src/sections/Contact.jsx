@@ -4,7 +4,7 @@ import SectionTitle from "../components/SectionTitle";
 export default function Contact({ id }) {
   return (
     <section id={id} className="relative min-h-screen py-20">
-      <div className="absolute inset-0 bg-[#f9f8f3] -z-10" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[#fafafa] -z-10" aria-hidden="true" />
 
       <div
         className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8"
