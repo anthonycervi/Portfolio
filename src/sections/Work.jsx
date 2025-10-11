@@ -57,7 +57,16 @@ export default function Work({ id }) {
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         style={{ marginLeft: "calc(var(--rail-left) + var(--content-gap, 1px))" }}
       >
-        <h2 className="text-3xl font-extrabold text-gray-100 mb-2">Selected Work</h2>
+        <div className="flex items-baseline gap-3 mb-2">
+          <img
+            src="/briefcase.svg"
+            alt="Work Icon"
+            width={26}
+            height={26}
+            className="relative top-[2px] shrink-0 invert brightness-[2]"
+          />
+          <h2 className="text-3xl font-extrabold text-gray-100">Selected work</h2>
+        </div>
         <p className="text-gray-100 opacity-50 mb-10">A few projects I loved building.</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">

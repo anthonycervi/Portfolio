@@ -1,20 +1,25 @@
 "use client";
 import SectionTitle from "../components/SectionTitle";
+import Image from "next/image";
 
 export default function Contact({ id }) {
   return (
     <section id={id} className="relative min-h-screen py-20">
       <div className="absolute inset-0 bg-[#fafafa] -z-10" aria-hidden="true" />
 
-      <div
-        className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8"
-        style={{
-          marginLeft: "calc(var(--rail-left) + var(--content-gap, 1px))",
-        }}
-      >
-        <SectionTitle>Contact</SectionTitle>
-        <p className="mt-4 text-[#4b4b4b]">
-          Reach out for collaborations, freelance, or full-time opportunities.
+      <div className="mx-[calc(22%+1rem)] max-w-none">
+        <div className="flex items-baseline gap-3">
+          <Image
+            src="/envelope.svg"
+            alt="Envelope Icon"
+            width={26}
+            height={26}
+            className="relative top-[2px] shrink-0"
+          />
+          <SectionTitle>Let's get in touch.</SectionTitle>
+        </div>
+        <p className="mt-4 text-[#4b4b4b] text-xl font-medium leading-relaxed">
+        I’m always up for a virtual coffee and a chat — just drop me a line and we’ll set something up. Alternatively if you email, I promise I’ll reply.
         </p>
 
         <form className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">

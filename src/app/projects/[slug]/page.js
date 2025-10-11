@@ -49,9 +49,9 @@ export default function ProjectPage({ params }) {
   const next = projects[(currentIndex + 1) % projects.length];
 
   return (
-    <main className="min-h-screen flex flex-col md:flex-row">
+    <main className="min-h-screen flex flex-col md:flex-row bg-[#fafafa]">
       {/* Left: scrollable showcase with light background */}
-      <div className="flex-1 overflow-y-auto p-6 md:p-12 space-y-16 text-[#2f2f2f] bg-[#f9f8f3]">
+      <div className="flex-1 overflow-y-auto p-6 md:p-12 space-y-16 text-[#2f2f2f] bg-[#fafafa]">
         <img
           src={project.image}
           alt={project.title}

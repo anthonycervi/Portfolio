@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import SectionTitle from "../components/SectionTitle";
+import Image from "next/image";
 
 /** ---- Skills data ---- */
 const SKILL_CATEGORIES = {
@@ -77,7 +78,16 @@ export default function About({ id }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
           {/* Left content */}
           <div className="lg:col-span-2">
-            <SectionTitle>About</SectionTitle>
+            <div className="flex items-baseline gap-3">
+              <Image
+                src="/info.svg"
+                alt="Info Icon"
+                width={26}
+                height={26}
+                className="relative top-[2px] shrink-0"
+              />
+              <SectionTitle>About me</SectionTitle>
+            </div>
 
             {/* Intro */}
             <p className="mt-6 text-lg sm:text-xl leading-relaxed text-[#4b4b4b]">
