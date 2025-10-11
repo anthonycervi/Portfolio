@@ -38,7 +38,7 @@ function ScrambleWord({ words, holdTime = 2000 }) {
           setDisplay(target);
           setPhase("hold");
         }
-      }, 40);
+      }, 30);
     }
 
     if (phase === "hold") {
@@ -60,7 +60,7 @@ function ScrambleWord({ words, holdTime = 2000 }) {
           setTargetIndex((i) => (i + 1) % words.length);
           setPhase("enter");
         }
-      }, 40);
+      }, 30);
     }
 
     return () => {
@@ -119,7 +119,7 @@ export default function Hero({ id }) {
           <ScrambleWord words={WORDS} holdTime={2000} />
         </h2>
 
-        <p className="mt-6 text-lg sm:text-xl text-gray-500 opacity-80">
+        <p className="mt-6 text-lg sm:text-xl" style={{ color: "#999999" }}>
   Let me show you…
 </p>
       </div>
