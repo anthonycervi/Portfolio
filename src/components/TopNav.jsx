@@ -22,7 +22,7 @@ export default function TopNav({ sections, active, onJump, showNav }) {
               key={s.id}
               onClick={() => onJump(s.id)}
               className={`transition-all duration-200 hover:opacity-80 ${
-                active === s.id ? "opacity-100" : "opacity-60"
+                active === s.id ? "opacity-100" : "opacity-40"
               }`}
             >
               {s.label}

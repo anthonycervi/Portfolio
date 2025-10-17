@@ -14,8 +14,10 @@ export default function AboutContinue({ id }) {
 
       {/* inner container aligned with rail */}
       <div
-        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
-        style={{ marginLeft: "calc(var(--rail-left) + var(--content-gap, 1px))" }}
+        className="mx-auto max-w-[900px] px-4 sm:px-6 lg:px-8 relative"
+        style={{
+          marginLeft: "calc(var(--rail-left) + var(--content-gap, 1px))",
+        }}
       >
         <div className="flex items-baseline justify-between gap-3">
           <SectionTitle>Let's get in touch.</SectionTitle>
