@@ -7,6 +7,7 @@ import PageRail from './components/PageRail';
 import Hero from './sections/Hero';
 import Work from './sections/Work';
 import About from './sections/About';
+import AboutContinue from './sections/AboutContinue';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 
@@ -99,6 +100,7 @@ export default function PortfolioHome() {
         <Hero id="start" />
         <Work id="work" />
         <About id="about" />
+        <AboutContinue id="AboutContinue" />
         <Contact id="contact" />
         <Footer />
       </main>

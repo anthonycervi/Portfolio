@@ -8,23 +8,33 @@ export default function Footer() {
 
       {/* aligned container */}
       <div
-        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center gap-8"
         style={{ marginLeft: "calc(var(--rail-left) + var(--content-gap, 1px))" }}
       >
         <a
           href="https://www.linkedin.com/in/anthony-cervi/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:opacity-80 transition-opacity inline-block"
+          className="transition-colors hover:text-gray-400 text-black inline-block"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-8 h-8 text-black fill-current"
+            className="w-8 h-8 fill-current"
             viewBox="0 0 24 24"
           >
             <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5h4V24h-4V8.5zM8.5 8.5h3.8v2.1h.1c.5-1 1.8-2.1 3.7-2.1 4 0 4.9 2.6 4.9 6V24h-4v-7.9c0-1.9 0-4.3-2.6-4.3s-3 2-3 4.1V24h-4V8.5z" />
           </svg>
         </a>
+        <a
+          href="mailto:anthonycervi97@gmail.com?subject=Hello%20Anthony"
+          className="text-black hover:text-gray-400 transition-colors inline-block text-lg font-semibold relative top-[2px]"
+          style={{ marginLeft: '6px' }}
+        >
+          anthonycervi97@gmail.com
+        </a>
+        <div className="text-sm text-gray-400 ml-auto text-right">
+          © 2025 Anthony Cervi. Designed and developed by me.
+        </div>
       </div>
     </footer>
   );

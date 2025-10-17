@@ -58,16 +58,11 @@ export default function Work({ id }) {
         style={{ marginLeft: "calc(var(--rail-left) + var(--content-gap, 1px))" }}
       >
         <div className="flex items-baseline gap-3 mb-2">
-          <img
-            src="/briefcase.svg"
-            alt="Work Icon"
-            width={26}
-            height={26}
-            className="relative top-[2px] shrink-0 invert brightness-[2]"
-          />
           <h2 className="text-3xl font-extrabold text-gray-100">Selected work</h2>
         </div>
-        <p className="text-gray-100 opacity-50 mb-10">A few projects I loved building.</p>
+        <p className="mb-10" style={{ color: "#999999" }}>
+          A few projects I loved building.
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">
           {projects.map((project, i) => {
@@ -125,7 +120,7 @@ export default function Work({ id }) {
                         className="absolute inset-0 pointer-events-none transition-opacity duration-700 ease-out"
                         style={{
                           opacity: lightPos[i] ? 1 : 0,
-                          background: `radial-gradient(circle at ${pos.x}% ${pos.y}%, rgba(255,255,255,0.10), transparent 70%)`,
+                          background: `radial-gradient(circle at ${pos.x}% ${pos.y}%, rgba(255,255,255,0.25), transparent 90%)`,
                           mixBlendMode: "screen",
                         }}
                       />
@@ -133,7 +128,7 @@ export default function Work({ id }) {
                         className="absolute inset-0 pointer-events-none transition-opacity duration-700 ease-out"
                         style={{
                           opacity: lightPos[i] ? 1 : 0,
-                          background: `radial-gradient(circle at ${100 - pos.x}% ${100 - pos.y}%, rgba(0,0,0,0.075), transparent 80%)`,
+                          background: `radial-gradient(circle at ${100 - pos.x}% ${100 - pos.y}%, rgba(0,0,0,0.10), transparent 90%)`,
                           mixBlendMode: "multiply",
                         }}
                       />

@@ -66,128 +66,45 @@ function SkillChip({ label }) {
 
 export default function About({ id }) {
   return (
-    <section id={id} data-bg="light" className="relative min-h-screen py-20">
+    <section id={id} data-bg="light" className="relative pt-40">
       {/* light background */}
-      <div className="absolute inset-0 bg-[#fafafa] -z-10" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[#eaeaea] -z-10" aria-hidden="true" />
 
       {/* aligned content */}
       <div
         className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8"
         style={{ marginLeft: "calc(var(--rail-left) + var(--content-gap, 1px))" }}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
           {/* Left content */}
-          <div className="lg:col-span-2">
+          <div className="lg:w-1/2 w-full">
             <div className="flex items-baseline gap-3">
-              <Image
-                src="/info.svg"
-                alt="Info Icon"
-                width={26}
-                height={26}
-                className="relative top-[2px] shrink-0"
-              />
-              <SectionTitle>About me</SectionTitle>
+              <SectionTitle>Hi, I'm Anthony</SectionTitle>
             </div>
 
             {/* Intro */}
             <p className="mt-6 text-lg sm:text-xl leading-relaxed text-[#4b4b4b]">
-              I’m a product designer & front-end builder who loves turning
-              complex problems into clear, usable interfaces. I care about the
-              details—micro-interactions, motion, readable systems—and I ship.
+              I specialize in creating visually captivating and functionally robust digital experiences.
             </p>
-
-            {/* Snapshot */}
-            <div className="mt-8 grid sm:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <h3 className="text-sm font-semibold tracking-wide uppercase text-[#6b7280]">
-                  Snapshot
-                </h3>
-                <ul className="space-y-1 text-[#4b4b4b]">
-                  <li>• Designer & builder (UI/UX + front-end)</li>
-                  <li>• Seeking full-time roles</li>
-                  <li>• Practical, detail-oriented, collaborative</li>
-                </ul>
-              </div>
-
-              {/* Strengths */}
-              <div className="space-y-2">
-                <h3 className="text-sm font-semibold tracking-wide uppercase text-[#6b7280]">
-                  Strengths
-                </h3>
-                <ul className="space-y-1 text-[#4b4b4b]">
-                  <li>• Problem-solving with crisp, testable solutions</li>
-                  <li>• Human-centered empathy from discovery to delivery</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Process */}
-            <div className="mt-10 space-y-3">
-              <h3 className="text-sm font-semibold tracking-wide uppercase text-[#6b7280]">
-                How I work
-              </h3>
-              <ol className="space-y-2 text-[#4b4b4b]">
-                <li>
-                  <span className="font-semibold">1) Discover</span> — clarify
-                  goals, risks, constraints; talk to users; map jobs-to-be-done.
-                </li>
-                <li>
-                  <span className="font-semibold">2) Define</span> — synthesize
-                  insights; frame the problem and success metrics.
-                </li>
-                <li>
-                  <span className="font-semibold">3) Design</span> — low-fi →
-                  hi-fi flows, systems, motion; iterate with tight feedback loops.
-                </li>
-                <li>
-                  <span className="font-semibold">4) Deliver</span> — document
-                  components, pair with engineering, measure outcomes, refine.
-                </li>
-              </ol>
-            </div>
-
-            {/* Values */}
-            <div className="mt-10 space-y-3">
-              <h3 className="text-sm font-semibold tracking-wide uppercase text-[#6b7280]">
-                Values
-              </h3>
-              <ul className="space-y-1 text-[#4b4b4b]">
-                <li>• Craft — sweat the details; make it feel inevitable.</li>
-                <li>• Candor — clear, kind feedback makes work better.</li>
-                <li>• Ownership — bias to action; leave work better than you found it.</li>
-              </ul>
-            </div>
-
-            {/* Outside of work */}
-            <div className="mt-10 space-y-3">
-              <h3 className="text-sm font-semibold tracking-wide uppercase text-[#6b7280]">
-                Outside of work
-              </h3>
-              <p className="text-[#4b4b4b]">
-                I love skiing and cycling. I was raised on the slopes, hiking
-                trails, and cycling big climbs. That balance of focused digital
-                craft and outdoor challenge keeps my head clear and my work sharp.
-              </p>
-            </div>
+            {/* Resume button */}
+            <a
+              href="/AnthonyCervi_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-6 px-6 py-3 bg-[#89BE57] text-white font-semibold rounded-md hover:bg-[#77a84d] transition-colors"
+            >
+              Resume
+            </a>
           </div>
-
           {/* Right card / visual placeholder */}
-          <div className="rounded-2xl bg-white ring-1 ring-[#d9d9d9] aspect-square shadow-sm" />
-        </div>
-
-        {/* Skills */}
-        <div className="mt-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {Object.entries(SKILL_CATEGORIES).map(([category, skills]) => (
-              <div key={category} className="space-y-5">
-                <h3 className="text-gray-600 font-semibold text-xl">{category}</h3>
-                <div className="flex flex-wrap gap-3">
-                  {skills.map((skill) => (
-                    <SkillChip key={skill} label={skill} />
-                  ))}
-                </div>
-              </div>
-            ))}
+          <div className="flex justify-end lg:w-1/2 w-full">
+            <Image
+              src="/profilepic.webp"
+              alt="Profile picture of Anthony Cervi"
+              width={920}
+              height={920}
+              className="rounded-2xl object-cover"
+            />
           </div>
         </div>
       </div>
