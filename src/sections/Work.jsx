@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import projects from "../app/projects/projectsData";
+import { motion } from "framer-motion";
 
 const DEFAULT_DOT_SIZE = 40;
 const DEFAULT_DOT_POSITION = { top: "10%", right: "-20px" };
@@ -47,7 +48,7 @@ export default function Work({ id }) {
   };
 
   return (
-    <section id={id} data-bg="dark" className="relative min-h-screen py-40">
+    <section id={id} data-bg="dark" className="relative min-h-screen py-30">
       <div
         className="absolute inset-0 -z-10"
         style={{ backgroundColor: "#181818" }}
@@ -64,7 +65,13 @@ export default function Work({ id }) {
           A few projects I loved building.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12"
+        >
           {projects.map((project, i) => {
             const dotSize = project.dotSize || DEFAULT_DOT_SIZE;
             const dotPosition = project.dotPosition || DEFAULT_DOT_POSITION;
@@ -77,7 +84,7 @@ export default function Work({ id }) {
 
             return (
               <Link key={project.slug} href={`/projects/${project.slug}`} passHref>
-                <div
+                <motion.div
                   className={`relative group max-w-md w-full cursor-pointer -translate-x-25 ${offsetY}`}
                   style={{ perspective: "1600px" }}
                   onMouseMove={(e) => handleMouseMove(e, i)}
@@ -135,7 +142,10 @@ export default function Work({ id }) {
                     </article>
 
                     {/* title block moved down a bit */}
-                    <div
+                    <motion.div
+                      initial={{ opacity: 0, x: -50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
                       className="absolute bottom-4 -left-10 flex flex-col items-start space-y-3"
                       style={{ transform: "translateZ(40px) scale(0.9)" }}
                     >
@@ -153,7 +163,7 @@ export default function Work({ id }) {
                           →
                         </span>
                       </div>
-                    </div>
+                    </motion.div>
 
                     {/* green square / dot replaced with dynamic image */}
                     {project.dotImage ? (
@@ -180,11 +190,11 @@ export default function Work({ id }) {
                       />
                     )}
                   </div>
-                </div>
+                </motion.div>
               </Link>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

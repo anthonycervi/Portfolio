@@ -95,7 +95,7 @@ export default function TopNav({ sections, active, onJump, showNav }) {
                 <button
                   key={s.id}
                   onClick={() => onJump(s.id)}
-                  className={`transition-colors duration-150 underline-offset-4 hover:underline hover:underline-offset-4 ${
+                  className={`cursor-pointer transition-colors duration-150 underline-offset-4 hover:underline hover:underline-offset-4 ${
                     isActive ? "hover:decoration-[#89BE57]" : "hover:decoration-[#6a6a6a]"
                   }`}
                   style={{

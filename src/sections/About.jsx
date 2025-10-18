@@ -1,72 +1,10 @@
 "use client";
-import { useState } from "react";
 import SectionTitle from "../components/SectionTitle";
 import Image from "next/image";
 
-/** ---- Skills data ---- */
-const SKILL_CATEGORIES = {
-  Development: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "jQuery",
-    "React",
-    "React Native",
-    "Next.js",
-    "SASS",
-    "WordPress",
-    "Elementor",
-    "Node.js",
-    "Xcode",
-    "Android Studio",
-  ],
-  Design: [
-    "Figma",
-    "Axure",
-    "Photoshop",
-    "Illustrator",
-    "Premier Pro",
-    "XD",
-    "After Effects",
-    "Procreate",
-    "InVision",
-    "Webflow",
-    "Balsamiq",
-    "Nomad Sculpt",
-    "Chief Architect",
-    "Squarespace",
-  ],
-};
-
-const COLORS = ["#FDCA0E", "#FC5649", "#6495ED", "#89BE57"];
-
-function SkillChip({ label }) {
-  const [hoverColor, setHoverColor] = useState(null);
-
-  const handleMouseEnter = () => {
-    const randomColor = COLORS[Math.floor(Math.random() * COLORS.length)];
-    setHoverColor(randomColor);
-  };
-  const handleMouseLeave = () => setHoverColor(null);
-
-  return (
-    <span
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className="cursor-pointer rounded-md px-4 py-2 text-base font-medium transition-colors duration-200"
-      style={{
-        backgroundColor: hoverColor ? hoverColor : "#e5e7eb", // gray-200
-        color: hoverColor ? "#fff" : "#1f2937", // white on hover, gray-800 default
-      }}
-    >
-      {label}
-    </span>
-  );
-}
-
 export default function About({ id }) {
   return (
-    <section id={id} data-bg="light" className="relative pt-40">
+    <section id={id} data-bg="light" className="relative pt-30">
       {/* light background */}
       <div className="absolute inset-0 bg-[#eaeaea] -z-10" aria-hidden="true" />
 
@@ -83,9 +21,10 @@ export default function About({ id }) {
             </div>
 
             {/* Intro */}
-            <p className="text-lg sm:text-xl leading-relaxed text-[#4b4b4b] border-0">
+            <p className="text-lg sm:text-xl leading-relaxed text-[#6b6b6b]">
               I specialize in creating visually captivating and functionally robust digital experiences.
             </p>
+
             {/* Resume button */}
             <a
               href="/AnthonyCervi_Resume.pdf"
@@ -96,7 +35,8 @@ export default function About({ id }) {
               Resume
             </a>
           </div>
-          {/* Right card / visual placeholder */}
+
+          {/* Right profile image */}
           <div className="flex justify-end lg:w-1/2 w-full">
             <Image
               src="/profilepic.webp"

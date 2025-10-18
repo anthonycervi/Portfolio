@@ -17,7 +17,10 @@ export default function AboutContinue({ id }) {
         style={{ marginLeft: "calc(var(--rail-left) + var(--content-gap, 1px))" }}
       >
         {/* First line */}
-        <SectionTitle>This is a placeholder title</SectionTitle>
+        <SectionTitle>Skills</SectionTitle>
+        <p className="mt-6 text-lg text-[#555] max-w-3xl leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
       </div>
     </section>
   );
