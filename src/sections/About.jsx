@@ -83,7 +83,7 @@ export default function About({ id }) {
             </div>
 
             {/* Intro */}
-            <p className="mt-6 text-lg sm:text-xl leading-relaxed text-[#4b4b4b]">
+            <p className="text-lg sm:text-xl leading-relaxed text-[#4b4b4b] border-0">
               I specialize in creating visually captivating and functionally robust digital experiences.
             </p>
             {/* Resume button */}

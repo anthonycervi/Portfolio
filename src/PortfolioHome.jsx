@@ -80,12 +80,20 @@ export default function PortfolioHome() {
         setOpen={setMobileMenuOpen}
         showNav={showNav}
       />
-      <TopNav
-        sections={sections}
-        active={active}
-        onJump={scrollTo}
-        showNav={showNav}
-      />
+
+      {/* Desktop nav in a blending layer */}
+      <div className="hidden md:block pointer-events-none fixed inset-x-0 top-0 z-[60]">
+        <div className="pointer-events-auto mix-blend-difference">
+          <div className="text-white">
+            <TopNav
+              sections={sections}
+              active={active}
+              onJump={scrollTo}
+              showNav={showNav}
+            />
+          </div>
+        </div>
+      </div>
 
       {/* Rail */}
       <PageRail

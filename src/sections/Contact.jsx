@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AboutContinue({ id }) {
   return (
-    <section id={id} className="relative min-h-screen py-20">
+    <section id={id} className="relative py-20">
       {/* full-bleed background */}
       <div
         className="absolute inset-0 bg-[#fafafa] -z-10"
@@ -36,21 +36,21 @@ export default function AboutContinue({ id }) {
 
         <form className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <input
-            className="bg-white ring-1 ring-[#d9d9d9] rounded-lg px-4 py-3 outline-none focus:ring-[#89BE57]"
+            className="bg-white ring-1 ring-[#d9d9d9] rounded-md px-4 py-3 outline-none focus:ring-[#89BE57]"
             placeholder="Your name"
           />
           <input
-            className="bg-white ring-1 ring-[#d9d9d9] rounded-lg px-4 py-3 outline-none focus:ring-[#89BE57]"
+            className="bg-white ring-1 ring-[#d9d9d9] rounded-md px-4 py-3 outline-none focus:ring-[#89BE57]"
             placeholder="Email"
             type="email"
           />
           <textarea
-            className="sm:col-span-2 bg-white ring-1 ring-[#d9d9d9] rounded-lg px-4 py-3 min-h-[140px] outline-none focus:ring-[#89BE57]"
+            className="sm:col-span-2 bg-white ring-1 ring-[#d9d9d9] rounded-md px-4 py-3 min-h-[140px] outline-none focus:ring-[#89BE57]"
             placeholder="Message"
           />
           <button
             type="submit"
-            className="sm:col-span-2 inline-flex justify-center rounded-xl bg-[#89BE57] hover:bg-[#6fa34a] px-5 py-3 font-semibold text-white"
+            className="sm:col-span-2 inline-flex justify-center rounded-md bg-[#89BE57] hover:bg-[#6fa34a] px-5 py-3 font-semibold text-white"
           >
             Send message
           </button>
