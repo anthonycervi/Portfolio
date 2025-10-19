@@ -66,9 +66,9 @@ export default function Work({ id }) {
         </p>
 
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12"
         >
@@ -86,7 +86,7 @@ export default function Work({ id }) {
               <Link key={project.slug} href={`/projects/${project.slug}`} passHref>
                 <motion.div
                   className={`relative group max-w-md w-full cursor-pointer -translate-x-25 ${offsetY}`}
-                  style={{ perspective: "1600px" }}
+                  style={{ perspective: "800px" }}
                   onMouseMove={(e) => handleMouseMove(e, i)}
                   onMouseLeave={() => handleMouseLeave(i)}
                 >
@@ -143,25 +143,27 @@ export default function Work({ id }) {
 
                     {/* title block moved down a bit */}
                     <motion.div
-                      initial={{ opacity: 0, x: -50 }}
-                      animate={{ opacity: 1, x: 0 }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
                       transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
-                      className="absolute bottom-4 -left-10 flex flex-col items-start space-y-3"
-                      style={{ transform: "translateZ(40px) scale(0.9)" }}
+                      className="absolute bottom-5 -left-5 z-10"
+                      style={{ transform: "translateZ(40px)", transformStyle: "preserve-3d", willChange: "transform" }}
                     >
-                      <h3 className="text-2xl font-extrabold text-gray-100">{project.title}</h3>
-                      <div className="w-44 h-[4px] bg-gray-100" />
-                      <div className="flex items-center space-x-2">
-                        <span className="text-base font-semibold" style={{ color: "#999999" }}>
-                          {project.linkText || "Case Study"}
-                        </span>
-                        <span
-                          className="transform transition-transform duration-150 group-hover:translate-x-8"
-                          style={{ color: "#999999" }}
-                          aria-hidden="true"
-                        >
-                          →
-                        </span>
+                      <div className="flex flex-col items-start space-y-3">
+                        <h3 className="text-2xl font-extrabold text-gray-100">{project.title}</h3>
+                        <div className="w-44 h-[4px] bg-gray-100" />
+                        <div className="flex items-center space-x-2">
+                          <span className="text-base font-semibold" style={{ color: "#999999" }}>
+                            {project.linkText || "Case Study"}
+                          </span>
+                          <span
+                            className="transform transition-transform duration-150 group-hover:translate-x-8"
+                            style={{ color: "#999999" }}
+                            aria-hidden="true"
+                          >
+                            →
+                          </span>
+                        </div>
                       </div>
                     </motion.div>
 
@@ -170,12 +172,13 @@ export default function Work({ id }) {
                       <img
                         src={project.dotImage}
                         alt={`${project.title} icon`}
-                        className="absolute object-contain opacity-100 pointer-events-none"
+                        className="absolute object-contain opacity-100 pointer-events-none rounded-full"
                         style={{
                           ...dotPosition,
                           width: dotSize,
                           height: dotSize,
                           transform: "translateZ(40px) scale(0.9)",
+                          borderRadius: "10%",
                         }}
                       />
                     ) : (

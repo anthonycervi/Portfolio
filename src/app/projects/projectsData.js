@@ -25,9 +25,9 @@ const projects = [
     tags: ["Next.js", "Tailwind", "FramerMotion", "ResponsiveDesign"],
     link: "https://focuspact.ca/",
     linkText: "Mobile App",
-    dotImage: "/projects/focuspact-dot.webp",
-    dotPosition: { top: "10%", left: "8%" },
-    dotSize: "100px",
+    dotImage: "/projects/Logo1.webp",
+    dotPosition: { top: "15%", left: "90%" },
+    dotSize: "60px",
   },
   {
     slug: "noline",
