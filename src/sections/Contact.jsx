@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function AboutContinue({ id }) {
   return (
-    <section id={id} className="relative py-20">
+    <section id={id} className="relative pt-24 pb-40">
       {/* full-bleed background */}
       <div
         className="absolute inset-0 bg-[#fafafa] -z-10"
@@ -15,7 +15,7 @@ export default function AboutContinue({ id }) {
 
       {/* inner container aligned with rail */}
       <motion.div
-        className="mx-auto max-w-[900px] px-4 sm:px-6 lg:px-8 relative"
+        className="mx-auto max-w-[900px] px-4 sm:px-6 lg:px-8 relative flex flex-col justify-center"
         style={{
           marginLeft: "calc(var(--rail-left) + var(--content-gap, 1px))",
         }}

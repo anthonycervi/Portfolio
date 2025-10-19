@@ -21,9 +21,9 @@ const projects = [
     ),
     description:
       "A personal site built with Next.js and Tailwind showcasing interactive design systems and animations.",
-    image: "/projects/portfolio.png",
+    image: "/projects/FocusPactProjectCard2.png",
     tags: ["Next.js", "Tailwind", "FramerMotion", "ResponsiveDesign"],
-    link: "https://example.com/portfolio-website",
+    link: "https://focuspact.ca/",
     linkText: "Mobile App",
     dotImage: "/projects/focuspact-dot.webp",
     dotPosition: { top: "10%", left: "8%" },
