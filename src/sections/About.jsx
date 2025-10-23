@@ -1,6 +1,7 @@
 "use client";
 import SectionTitle from "../components/SectionTitle";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function About({ id }) {
   return (
@@ -15,7 +16,13 @@ export default function About({ id }) {
       >
         <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
           {/* Left content */}
-          <div className="lg:w-1/2 w-full">
+          <motion.div
+            className="lg:w-1/2 w-full"
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <div className="flex items-baseline gap-3">
               <SectionTitle>Hi, I'm Anthony</SectionTitle>
             </div>
@@ -34,10 +41,16 @@ export default function About({ id }) {
             >
               Resume
             </a>
-          </div>
+          </motion.div>
 
           {/* Right profile image */}
-          <div className="flex justify-end lg:w-1/2 w-full">
+          <motion.div
+            className="flex justify-end lg:w-1/2 w-full"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <Image
               src="/profilepic.webp"
               alt="Profile picture of Anthony Cervi"
@@ -45,7 +58,7 @@ export default function About({ id }) {
               height={920}
               className="rounded-2xl object-cover"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

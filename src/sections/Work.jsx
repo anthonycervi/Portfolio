@@ -65,13 +65,7 @@ export default function Work({ id }) {
           A few projects I loved building.
         </p>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.3 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">
           {projects.map((project, i) => {
             const dotSize = project.dotSize || DEFAULT_DOT_SIZE;
             const dotPosition = project.dotPosition || DEFAULT_DOT_POSITION;
@@ -118,7 +112,7 @@ export default function Work({ id }) {
                         className="absolute bottom-0 left-0 w-[130%] h-[130%] pointer-events-none"
                         style={{
                           background:
-                            "radial-gradient(ellipse at bottom left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 25%, rgba(0,0,0,0.15) 40%, transparent 110%)",
+                            "radial-gradient(ellipse at bottom left, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 30%, rgba(0,0,0,0.25) 45%, transparent 100%)",
                         }}
                       />
 
@@ -197,7 +191,7 @@ export default function Work({ id }) {
               </Link>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
