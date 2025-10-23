@@ -58,7 +58,7 @@ export default function ProjectPanel({ project, prev, next, currentIndex, total 
       <div>
         {/* Home (static) */}
         <a
-          href="/"
+          href="/#work"
           className="mb-8 inline-flex items-center text-base font-semibold text-[#89BE57] hover:text-[#6c9c46] transition-colors"
         >
           <span className="mr-2">←</span> Home
