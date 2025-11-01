@@ -1,8 +1,8 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import projects from "../app/projects/projectsData";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const DEFAULT_DOT_SIZE = 40;
 const DEFAULT_DOT_POSITION = { top: "10%", right: "-20px" };
@@ -13,6 +13,9 @@ const mapRange = (value, inMin, inMax, outMin, outMax) =>
 export default function Work({ id }) {
   const [transform, setTransform] = useState({});
   const [lightPos, setLightPos] = useState({});
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const handleMouseMove = (e, i) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -48,7 +51,7 @@ export default function Work({ id }) {
   };
 
   return (
-    <section id={id} data-bg="dark" className="relative min-h-screen py-30">
+    <section ref={ref} id={id} data-bg="dark" className="relative min-h-screen py-25">
       <div
         className="absolute inset-0 -z-10"
         style={{ backgroundColor: "#181818" }}
@@ -61,11 +64,11 @@ export default function Work({ id }) {
         <div className="flex items-baseline gap-3 mb-2">
           <h2 className="text-3xl font-extrabold text-gray-100">Selected work</h2>
         </div>
-        <p className="mb-10" style={{ color: "#999999" }}>
-          A few projects I loved building.
-        </p>
+        <p className="text-lg sm:text-xl leading-relaxed text-[#6b6b6b]">
+              a few projects I loved building
+            </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">
           {projects.map((project, i) => {
             const dotSize = project.dotSize || DEFAULT_DOT_SIZE;
             const dotPosition = project.dotPosition || DEFAULT_DOT_POSITION;
@@ -83,6 +86,9 @@ export default function Work({ id }) {
                   style={{ perspective: "800px" }}
                   onMouseMove={(e) => handleMouseMove(e, i)}
                   onMouseLeave={() => handleMouseLeave(i)}
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+                  transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
                 >
                   <div
                     className="relative"

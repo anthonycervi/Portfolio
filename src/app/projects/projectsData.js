@@ -92,7 +92,7 @@ const projects = [
     dotPosition: { top: "12%", right: "-10%" },
     dotSize: "110px",
     heroImage:"/projects/noline3.webp",
-    heroImageSize: "200px",
+    heroImageSize: "170px",
     roleColor: "#FDCA0E",
     roleText: "ROLE - ECOMMERCE DESIGNER",
     skillsTitle: "Design & Development",

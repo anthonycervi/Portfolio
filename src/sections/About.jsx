@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function About({ id }) {
   return (
-    <section id={id} data-bg="light" className="relative pt-30">
+    <section id={id} data-bg="light" className="relative pt-25">
       {/* light background */}
       <div className="absolute inset-0 bg-[#eaeaea] -z-10" aria-hidden="true" />
 

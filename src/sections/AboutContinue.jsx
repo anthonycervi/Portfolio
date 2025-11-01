@@ -4,7 +4,7 @@ import SectionTitle from "../components/SectionTitle";
 
 export default function AboutContinue({ id }) {
   return (
-    <section id={id} className="relative py-20">
+    <section id={id} className="relative py-15">
       {/* full-bleed background */}
       <div className="absolute inset-0 bg-[#fafafa] -z-10" aria-hidden="true" />
 

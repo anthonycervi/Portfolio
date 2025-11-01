@@ -6,10 +6,10 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, subject, message } = await req.json();
 
     // Basic validation
-    if (!name || !email || !message) {
+    if (!name || !email || !subject || !message) {
       return new Response(
         JSON.stringify({ success: false, error: "Missing fields" }),
         { status: 400, headers: { "Content-Type": "application/json" } }
@@ -20,10 +20,11 @@ export async function POST(req) {
     await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: "anthonycervi97@gmail.com", // 👈 Change this to your actual inbox
-      subject: `New message from ${name}`,
+      subject: `New message from ${name} - ${subject}`,
       text: `
         Name: ${name}
         Email: ${email}
+        Subject: ${subject}
 
         Message:
         ${message}
